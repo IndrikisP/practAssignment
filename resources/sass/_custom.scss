@@ -1,3 +1,29 @@
 nav{
     margin-bottom:20px;
 }
+
+.commentClass{
+    background-color:#eff2f5;
+    padding:7px 7px 7px 7px;
+    border: 2px solid #eaeef1;
+    border-radius: 5px;
+}
+.btn-del {
+    margin-top:10px;
+    margin-bottom:20px;
+    background-color:rgb(221, 125, 125);
+}
+.btn-edit {
+    margin-top:10px;
+    background-color:rgb(186, 186, 223);
+}
+.btn-edit:hover {
+    border: 1px solid rgb(129, 129, 189);
+}
+.btn-del:hover {
+    border: 1px solid rgb(185, 81, 81);
+}
+.btn-mrg{
+    margin-top:10px;
+    margin-bottom:10px;
+}

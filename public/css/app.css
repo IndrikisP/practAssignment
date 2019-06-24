@@ -11132,3 +11132,34 @@ nav {
   margin-bottom: 20px;
 }
 
+.commentClass {
+  background-color: #eff2f5;
+  padding: 7px 7px 7px 7px;
+  border: 2px solid #eaeef1;
+  border-radius: 5px;
+}
+
+.btn-del {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  background-color: #dd7d7d;
+}
+
+.btn-edit {
+  margin-top: 10px;
+  background-color: #babadf;
+}
+
+.btn-edit:hover {
+  border: 1px solid #8181bd;
+}
+
+.btn-del:hover {
+  border: 1px solid #b95151;
+}
+
+.btn-mrg {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+

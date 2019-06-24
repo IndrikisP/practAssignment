@@ -9,6 +9,7 @@
             <h3><a href="/posts/{{$post->id}}">{{$post->title}}</a></h3>
             {!!$post->body!!}
                 </div>
+               
             <hr>
             
             
@@ -17,4 +18,5 @@
     @else
         <p>No posts are found</p>
     @endif
+
 @endsection

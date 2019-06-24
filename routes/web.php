@@ -14,9 +14,14 @@
 Route::get('/','PagesController@index' );
 Route::get('/about','PagesController@about');
 
+Route::get('/search','PagesController@search');
 
 Route::resource('posts','PostsController');
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
+
+Route::resource('comments', 'CommentsController');
+
+Route::resource('likes','LikesController');

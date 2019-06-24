@@ -15,7 +15,7 @@
                     @endif
                    
                     <br>
-                    <a href="/posts/create" class="btn btn-primary">Create a Post</a>
+                    <a href="/posts/create" class="btn btn-mrg btn-primary">Create a Post</a>
                     @if(count($posts)>0)
                     <h2> Your blog posts</h2>
                             @foreach($posts as $post)

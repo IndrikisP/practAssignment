@@ -92,7 +92,7 @@ class PostsController extends Controller
 
         //we need to check if this is the correct user
         if(auth()->user()->id!==$post->user_id){
-            return redirect('/posts')->with('error','You are not authorized to edit this');
+            return redirect('/posts')->with('error','You are not authorized to edit the post');
         }
 
         return view('posts.edit')->with('post',$post);
@@ -117,7 +117,7 @@ class PostsController extends Controller
         $post->body= $request->input('body');
         $post->save();
 
-        return redirect('/posts')->with('success', 'Post was updated');
+        return redirect('/home')->with('success', 'Post was updated');
     }
 
     /**
