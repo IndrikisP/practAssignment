@@ -1,0 +1,33 @@
+<?php 
+    return [
+        'Home' => 'Home',
+        'About' => 'About',
+        'Search' => 'Search',
+        'Blog' => 'Blog',
+        'New_Post' => 'New Post',
+        'Dashboard' => 'Dashboard',
+        'Logout' => 'Logout',
+        'Login' => 'Login',
+        'Register' => 'Register',
+        'Posts' => 'Posts',
+        'create_post' => 'Create Post',
+        'title' => 'Title',
+        'body' => 'Body',
+        'your_blog_posts'=>'Your Blog Posts',
+        'create_post'=>'Create a post',
+        'back'=>'Back',
+        'no_comments'=>'This post has no comments',
+        'comments'=>'Comments',
+        'add_comment'=>'Add a comment',
+        'about_us'=>'About us',
+        'written_on'=>'Written on',
+        'by'=>'by',
+        'Name'=>'Name',
+        'email_address'=>'E-mail address',
+        'Password'=>'Password',
+        'confirm_password'=>'Confirm Password',
+        'remember_me'=>'Remember Me',
+        'forgot_password'=>'Forgot Password?',
+        
+    ];
+?>

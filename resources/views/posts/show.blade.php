@@ -1,9 +1,9 @@
 @extends('layouts.app')
 
 @section('content')
-<a href="/posts" class="btn btn-mrg btn-info">Back</a>
+<a href="/posts" class="btn btn-mrg btn-info">{{__('translations.back')}}</a>
 <h1>{{$post->title}}</h1>
-<small>Written on {{$post->created_at}} by {{$post->user->name}}</small>
+<small>{{__('translations.written_on')}} {{$post->created_at}} {{__('translations.by')}} {{$post->user->name}}</small>
 <hr>
 <div>
        {!!$post->body!!}
@@ -34,22 +34,22 @@
 
 
 @if (Auth::check())
-  <h4>Add a comment</h4>
+<h4>{{__('translations.add_comment')}}</h4>
   {{ Form::open(['action'=>'CommentsController@store', 'method' => 'POST']) }}
   <p>{{ Form::textarea('body', old('body')) }}</p>
   {{ Form::hidden('post_id', $post->id) }}
   <p>{{ Form::submit('Send',['class'=>'btn btn-mrg btn-primary']) }}</p>
 {{ Form::close() }}
 @endif
-<h3>Comments</h3>
+<h3>{{__('translations.comments')}}</h3>
 <!-- forelse is just foreach with extra handling for empty inputs -->
 @forelse ($post->comments as $comment)
-  <small>{{ $comment->user->name }} at {{$comment->created_at}}</small>
+  <small>{{ $comment->user->name }} {{$comment->created_at}}</small>
   <div class="commentClass">
   <p>{{ $comment->body }}</p>
   </div>
   <hr>
 @empty
-  <p>This post has no comments</p>
+  <p>{{__('translations.no_comments')}}</p>
 @endforelse
 @endsection

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Post;
 use DB;
+use App;
 // for sql queries instead of eloquent
 
 class PostsController extends Controller
@@ -17,7 +18,7 @@ class PostsController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth',['except'=>['index','show']]);
+        $this->middleware('auth',['except'=>['index','show','getSearch','postSearch']]);
     }
     /**
      * Display a listing of the resource.
@@ -141,5 +142,26 @@ class PostsController extends Controller
     public function homepage(){
         $posts = Post::orderBy('created_at','desc')->paginate(10);
         return view('posts.index')->with('posts',$posts);
+    }
+
+    public function getSearch(){
+        return view('pages.search');
+    }
+    public function postSearch(Request $request) {
+        return Post::where('title', 'LIKE', '%'.$request->get('search').'%')->get();
+    }
+
+   
+
+    public function sortByNewest(){
+        $posts = Post::orderBy('created_at','desc')->paginate(10);
+        return view('posts.index')->with('posts',$posts);
+    }
+    public function sortByOldest(){
+        $posts = Post::orderBy('created_at','asc')->paginate(10);
+        return view('posts.index')->with('posts',$posts);
+    }
+    public function sortByLikes(){
+
     }
 }

@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">Dashboard</div>
+            <div class="card-header">{{__('translations.Dashboard')}}</div>
 
                 <div class="card-body">
                     @if (session('status'))
@@ -15,9 +15,9 @@
                     @endif
                    
                     <br>
-                    <a href="/posts/create" class="btn btn-mrg btn-primary">Create a Post</a>
+                    <a href="/posts/create" class="btn btn-mrg btn-primary">{{__('translations.create_post')}}</a>
                     @if(count($posts)>0)
-                    <h2> Your blog posts</h2>
+                    <h2> {{__('translations.your_blog_posts')}}</h2>
                             @foreach($posts as $post)
                             <hr>
                                 <h2><a href="/posts/{{$post->id}}">{{$post->title}}</a></h2>

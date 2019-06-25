@@ -13,11 +13,8 @@
 
 Route::get('/','PagesController@index' );
 Route::get('/about','PagesController@about');
-
 Route::get('/search','PagesController@search');
-
 Route::resource('posts','PostsController');
-
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
@@ -25,3 +22,7 @@ Route::get('/home', 'HomeController@index');
 Route::resource('comments', 'CommentsController');
 
 Route::resource('likes','LikesController');
+
+Route::get('lang/{locale}','LanguageController');
+Route::get('/posts/search','PostsController@getSearch');
+Route::post('/posts/search','PostsController@postSearch');

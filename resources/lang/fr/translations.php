@@ -1,0 +1,33 @@
+<?php 
+    return [
+        'Home' => 'Page daccueil',
+        'About' => 'Sur',
+        'Search' => 'Chercher',
+        'Blog' => 'Blog',
+        'New_Post' => 'Nouvel article',
+        'Dashboard' => 'Tableau',
+        'Logout' => 'Connectez-out',
+        'Login' => 'Sidentifier',
+        'Register' => 'Registre',
+        'Posts' => 'Articles',
+        'create_post' => 'Creer Article',
+        'title' => 'Title',
+        'body' => 'Body',
+        'your_blog_posts'=>'Vos billets de blog',
+        'create_post'=>'Créer un article de blog',
+        'back'=>'Retour',
+        'no_comments'=>'Sans commentaires',
+        'comments'=>'Commentaires',
+        'add_comment'=>'Ajouter un commentaire',
+        'about_us'=>'A propos de nous',
+        'written_on'=>'Ecrit sur',
+        'by'=>'par',
+        'Name'=>'Prenom',
+        'email_address'=>'Adresse electronique',
+        'Password'=>'Mot de passe',
+        'confirm_password'=>'Confirmer mot de passe',
+        'remember_me'=>'Souviens-toi de moi',
+        'forgot_password'=>'Mot de passe oublie?',
+        
+    ];
+?>

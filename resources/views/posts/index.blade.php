@@ -1,10 +1,11 @@
 @extends('layouts.app')
 
 @section('content')
-    <h1>Posts</h1>
+<h1>{{__('translations.Posts')}}</h1>
+<!--<button>Sort</button>-->
     @if(count($posts)>0)
         @foreach($posts as $post)
-                    <small>Written on {{$post->created_at}} by {{$post->user->name}}</small>
+                    <small>{{__('translations.written_on')}} {{$post->created_at}} {{__('translations.by')}} {{$post->user->name}}</small>
                 <div class="jumbotron">
             <h3><a href="/posts/{{$post->id}}">{{$post->title}}</a></h3>
             {!!$post->body!!}
