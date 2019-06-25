@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Post;
+use App\Like;
 use DB;
 use App;
 // for sql queries instead of eloquent
@@ -33,7 +34,7 @@ class PostsController extends Controller
         //$posts = Post::orderBy('title','asc')->take(1)->get();
         //$posts = Post::orderBy('title','asc')->get();
 
-        $posts = Post::orderBy('created_at','desc')->paginate(10);
+        $posts = Post::orderBy('created_at','desc')->paginate(8);
         return view('posts.index')->with('posts',$posts);
     }
 
@@ -78,7 +79,10 @@ class PostsController extends Controller
     public function show($id)
     {
         $post =  Post::find($id);
-        return view('posts.show')->with('post',$post);
+        $likes = Like::where('post_id','=',$id)->get();
+        $likeCount = count($likes);
+        
+        return view('posts.show')->with('post',$post)->with('likes',$likeCount);
     }
 
     /**
@@ -140,7 +144,7 @@ class PostsController extends Controller
         return redirect('/posts')->with('success','Post deleted');
     }
     public function homepage(){
-        $posts = Post::orderBy('created_at','desc')->paginate(10);
+        $posts = Post::orderBy('created_at','asc')->paginate(10);
         return view('posts.index')->with('posts',$posts);
     }
 
@@ -153,15 +157,5 @@ class PostsController extends Controller
 
    
 
-    public function sortByNewest(){
-        $posts = Post::orderBy('created_at','desc')->paginate(10);
-        return view('posts.index')->with('posts',$posts);
-    }
-    public function sortByOldest(){
-        $posts = Post::orderBy('created_at','asc')->paginate(10);
-        return view('posts.index')->with('posts',$posts);
-    }
-    public function sortByLikes(){
-
-    }
+   
 }

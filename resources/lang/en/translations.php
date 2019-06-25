@@ -28,6 +28,7 @@
         'confirm_password'=>'Confirm Password',
         'remember_me'=>'Remember Me',
         'forgot_password'=>'Forgot Password?',
+        'people_liked_this' => 'people liked this',
         
     ];
 ?>

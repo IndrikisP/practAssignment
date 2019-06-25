@@ -28,5 +28,6 @@
         'confirm_password'=>'Apstiprināt Paroli',
         'remember_me'=>'Atceries Mani',
         'forgot_password'=>'Aizmirsāt paroli?',
+        'people_liked_this'=>'cilvēkiem tas patīk',
     ];
 ?>

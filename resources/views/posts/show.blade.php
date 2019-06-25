@@ -4,6 +4,7 @@
 <a href="/posts" class="btn btn-mrg btn-info">{{__('translations.back')}}</a>
 <h1>{{$post->title}}</h1>
 <small>{{__('translations.written_on')}} {{$post->created_at}} {{__('translations.by')}} {{$post->user->name}}</small>
+<div class="float-right"><small> {{$likes}} {{__('translations.people_liked_this')}}</small></div>
 <hr>
 <div>
        {!!$post->body!!}
@@ -46,7 +47,7 @@
 @forelse ($post->comments as $comment)
   <small>{{ $comment->user->name }} {{$comment->created_at}}</small>
   <div class="commentClass">
-  <p>{{ $comment->body }}</p>
+  <p>{!! $comment->body !!}</p>
   </div>
   <hr>
 @empty

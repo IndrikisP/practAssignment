@@ -28,6 +28,7 @@
         'confirm_password'=>'Confirmer mot de passe',
         'remember_me'=>'Souviens-toi de moi',
         'forgot_password'=>'Mot de passe oublie?',
+        'people_liked_this'=>'personnes ont aimé',
         
     ];
 ?>
